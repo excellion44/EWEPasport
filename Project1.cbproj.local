@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022.07.01 09:50:37.953,=C:\Users\excellionRX550\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2022.07.01 09:50:38.243,=C:\Users\excellionRX550\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2022.07.06 14:10:20.574,C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\MainForm.cpp=C:\Users\excellionRX550\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2022.07.06 14:10:20.575,C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\MainForm.dfm=C:\Users\excellionRX550\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022.07.06 14:10:20.575,C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\MainForm.h=C:\Users\excellionRX550\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>2022.07.06 14:11:00.267,C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Project1PCH1.h=C:\Users\excellionRX550\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2022.07.06 14:11:05.016,C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Project1.cbproj=C:\Users\excellionRX550\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2022.07.06 14:29:48.137,=C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Unit2.pas</Transaction>
+    <Transaction>2022.07.06 14:30:18.002,=C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Unit2.cpp</Transaction>
+    <Transaction>2022.07.06 14:31:17.181,C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Ziteli.cpp=C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Unit2.cpp</Transaction>
+    <Transaction>2022.07.06 14:31:17.181,C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Ziteli.dfm=C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Unit2.dfm</Transaction>
+    <Transaction>2022.07.06 14:31:17.181,C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Ziteli.h=C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Unit2.h</Transaction>
+    <Transaction>2022.07.06 14:31:22.304,C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Project1.cbproj=C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Project1.cbproj</Transaction>
+    <Transaction>2022.07.06 14:42:05.989,=C:\Users\excellionRX550\Desktop\EWEPasport\EWEPasport\Unit3.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
