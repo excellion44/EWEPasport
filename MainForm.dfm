@@ -22,6 +22,7 @@ object Form1: TForm1
     Width = 1088
     Height = 742
     Align = alClient
+    Color = clMenu
     DataSource = DataSource1
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     TabOrder = 0
@@ -121,10 +122,9 @@ object Form1: TForm1
     end
   end
   object ADOConnection1: TADOConnection
-    Connected = True
     ConnectionString = 
       'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=doc.mdb;Persist Sec' +
-      'urity Info=False'
+      'urity Info=False;'
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
@@ -166,6 +166,7 @@ object Form1: TForm1
       end
       object N6: TMenuItem
         Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+        OnClick = N6Click
       end
     end
   end

@@ -20,6 +20,7 @@ object Form2: TForm2
     Width = 991
     Height = 602
     Align = alClient
+    Color = clMenu
     DataSource = DataSource1
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     PopupMenu = PopupMenu1
@@ -29,6 +30,7 @@ object Form2: TForm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnDblClick = DBGrid1DblClick
     Columns = <
       item
         Expanded = False
@@ -80,7 +82,7 @@ object Form2: TForm2
     object Edit1: TEdit
       Left = 16
       Top = 35
-      Width = 321
+      Width = 137
       Height = 21
       TabOrder = 0
     end
