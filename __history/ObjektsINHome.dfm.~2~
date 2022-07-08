@@ -1,0 +1,56 @@
+object Form7: TForm7
+  Left = 0
+  Top = 0
+  Caption = 'Form7'
+  ClientHeight = 313
+  ClientWidth = 352
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 41
+    Width = 352
+    Height = 272
+    Align = alClient
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 352
+    Height = 41
+    Align = alTop
+    TabOrder = 1
+    ExplicitLeft = 96
+    ExplicitTop = 160
+    ExplicitWidth = 185
+    object ID_DOM: TLabel
+      Left = 248
+      Top = 14
+      Width = 40
+      Height = 13
+      Caption = 'ID_DOM'
+    end
+  end
+  object ADOQuery1: TADOQuery
+    Parameters = <>
+    Left = 136
+    Top = 200
+  end
+  object DataSource1: TDataSource
+    Left = 264
+    Top = 240
+  end
+end

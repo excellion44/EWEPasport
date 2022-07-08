@@ -5,6 +5,7 @@
 
 #include "Dom.h"
 #include "MainForm.h"
+#include "ObjektsINHome.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -70,6 +71,28 @@ void __fastcall TForm6::Button1Click(TObject *Sender)
 		ADOQuery1->Active = true;
 
         AddHomePanel->Visible = false;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm6::DBGrid1DblClick(TObject *Sender)
+{
+	String TYPE = ADOQuery1->FieldByName("TYPE")->Value;
+
+	if(TYPE == "Многоквартирный")
+	{
+		 Form7->ID_DOM->Caption = ADOQuery1->FieldByName("ID")->Value;
+
+			Form7->ADOQuery1->Active = false;
+			Form7->ADOQuery1->SQL->Text = "SELECT * FROM dom_objeckts WHERE ID_DOMA = '"+Form7->ID_DOM->Caption+"'";
+			Form7->ADOQuery1->Active = true;
+
+		 Form7->ShowModal();
+	}
+	else
+	{
+
+	}
 
 }
 //---------------------------------------------------------------------------
