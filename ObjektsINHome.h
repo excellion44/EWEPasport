@@ -21,6 +21,7 @@ __published:	// IDE-managed Components
 	TDataSource *DataSource1;
 	TPanel *Panel1;
 	TLabel *ID_DOM;
+	void __fastcall DBGrid1DblClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm7(TComponent* Owner);

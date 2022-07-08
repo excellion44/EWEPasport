@@ -28,6 +28,7 @@ object Form7: TForm7
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnDblClick = DBGrid1DblClick
     Columns = <
       item
         Expanded = False
@@ -55,9 +56,6 @@ object Form7: TForm7
     Height = 41
     Align = alTop
     TabOrder = 1
-    ExplicitLeft = 96
-    ExplicitTop = 160
-    ExplicitWidth = 185
     object ID_DOM: TLabel
       Left = 248
       Top = 14
