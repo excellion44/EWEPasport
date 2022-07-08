@@ -6,6 +6,7 @@
 #include "MainForm.h"
 #include "Ziteli.h"
 #include "AddZitel.h"
+#include "Dom.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -66,6 +67,17 @@ void __fastcall TForm1::N5Click(TObject *Sender)
 void __fastcall TForm1::N6Click(TObject *Sender)
 {
     Form4->ShowModal();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::DBGrid1DblClick(TObject *Sender)
+{
+	Form6->ID_ULICA->Caption = ADOQuery1->FieldByName("ID")->Value;
+	Form6->ADOQuery1->Active = false;
+	Form6->ADOQuery1->SQL->Text = "SELECT * FROM dom WHERE ID_ULICA = '"+Form6->ID_ULICA->Caption+"'";
+	Form6->ADOQuery1->Active = true;
+    Form6->ShowModal();
+
 }
 //---------------------------------------------------------------------------
 

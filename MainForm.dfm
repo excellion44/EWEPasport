@@ -31,6 +31,7 @@ object Form1: TForm1
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnDblClick = DBGrid1DblClick
     Columns = <
       item
         Color = clMenu

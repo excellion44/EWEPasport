@@ -11,6 +11,7 @@ object Form6: TForm6
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poMainFormCenter
   PixelsPerInch = 96
   TextHeight = 13
   object DBGrid1: TDBGrid
@@ -19,12 +20,51 @@ object Form6: TForm6
     Width = 405
     Height = 336
     Align = alClient
+    DataSource = DataSource1
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleHotTrack]
+    PopupMenu = PopupMenu1
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    Columns = <
+      item
+        Color = clMenu
+        Expanded = False
+        FieldName = 'TYPE'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Width = 193
+        Visible = True
+      end
+      item
+        Color = clMenu
+        Expanded = False
+        FieldName = 'NOMER'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Color = clMenu
+        Expanded = False
+        FieldName = 'BUKVA'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Width = 62
+        Visible = True
+      end>
   end
   object Panel1: TPanel
     Left = 0
@@ -34,16 +74,23 @@ object Form6: TForm6
     Align = alTop
     Caption = 'Panel1'
     TabOrder = 1
-    ExplicitLeft = 120
-    ExplicitTop = 192
-    ExplicitWidth = 185
+    object ID_ULICA: TLabel
+      Left = 280
+      Top = 14
+      Width = 47
+      Height = 13
+      Caption = 'ID_ULICA'
+    end
   end
   object AddHomePanel: TPanel
-    Left = 96
+    Left = 88
     Top = 112
     Width = 209
     Height = 145
+    Color = 12964031
+    ParentBackground = False
     TabOrder = 2
+    Visible = False
     object RadioButton1: TRadioButton
       Left = 8
       Top = 16
@@ -60,9 +107,9 @@ object Form6: TForm6
       Caption = #1063#1072#1089#1090#1085#1099#1081
       TabOrder = 1
     end
-    object TEdit
-      Left = 127
-      Top = 35
+    object Edit1: TEdit
+      Left = 8
+      Top = 62
       Width = 65
       Height = 21
       TabOrder = 2
@@ -75,6 +122,7 @@ object Form6: TForm6
       Height = 25
       Caption = #1044#1086#1073#1072#1074#1080#1090#1100
       TabOrder = 3
+      OnClick = Button1Click
     end
     object Button2: TButton
       Left = 112
@@ -84,6 +132,33 @@ object Form6: TForm6
       Caption = #1054#1090#1084#1077#1085#1072
       TabOrder = 4
       OnClick = Button2Click
+    end
+    object Edit2: TEdit
+      Left = 79
+      Top = 62
+      Width = 42
+      Height = 21
+      TabOrder = 5
+      TextHint = #1041#1091#1082#1074#1072
+    end
+  end
+  object ADOQuery1: TADOQuery
+    Connection = Form1.ADOConnection1
+    Parameters = <>
+    Left = 312
+    Top = 216
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOQuery1
+    Left = 312
+    Top = 272
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 184
+    Top = 304
+    object N1: TMenuItem
+      Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+      OnClick = N1Click
     end
   end
 end
