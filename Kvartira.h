@@ -22,6 +22,7 @@ __published:	// IDE-managed Components
 	TDataSource *DataSource1;
 	TADOQuery *ADOQuery2;
 	TDataSource *DataSource2;
+	void __fastcall DBGrid2DblClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm8(TComponent* Owner);

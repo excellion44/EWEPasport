@@ -11,6 +11,7 @@ object Form8: TForm8
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poMainFormCenter
   PixelsPerInch = 96
   TextHeight = 13
   object ID_KVARTIRA: TLabel
@@ -38,12 +39,56 @@ object Form8: TForm8
     Width = 713
     Height = 199
     DataSource = DataSource2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnDblClick = DBGrid2DblClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'FIO_CHELOVEK'
+        Title.Caption = #1060#1048#1054
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 299
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'GOD_ROZDENIYA'
+        Title.Caption = #1043#1086#1076' '#1056#1086#1078#1076#1077#1085#1080#1103
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 109
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DATA_PROPISKI'
+        Title.Caption = #1044#1072#1090#1072' '#1087#1088#1086#1087#1080#1089#1082#1080
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 127
+        Visible = True
+      end>
   end
   object ADOQuery1: TADOQuery
     Parameters = <>

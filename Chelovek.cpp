@@ -41,9 +41,22 @@ void __fastcall TForm3::DBGrid1DrawColumnCell(TObject *Sender, const TRect &Rect
 
 void __fastcall TForm3::FormShow(TObject *Sender)
 {
-    ADOQuery1->Active = false;
+	ADOQuery1->Active = false;
+	ADOQuery1->SQL->Text = "SELECT * FROM chelovek";
+	ADOQuery1->Active = true;
+
+       Edit1->Text = ADOQuery1->FieldByName("FAMILIYA")->Value;
+	   Edit2->Text = ADOQuery1->FieldByName("IMYA")->Value;
+	   Edit3->Text = ADOQuery1->FieldByName("OTCHESTVO")->Value;
+	   Edit4->Text = ADOQuery1->FieldByName("GOD_ROZDENIYA")->Value;
+
+
+	ADOQuery1->Active = false;
 	ADOQuery1->SQL->Text = "SELECT * FROM pasport WHERE ID_CHELOVEK = '"+IDChelovek->Caption+"' ORDER BY STATUS desc";
 	ADOQuery1->Active = true;
+
+
+
 
 
 	ADOQuery2->Active = false;

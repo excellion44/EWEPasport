@@ -57,6 +57,8 @@ object Form1: TForm1
     Top = 56
     Width = 401
     Height = 121
+    Color = clMoneyGreen
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object Label1: TLabel
@@ -123,6 +125,7 @@ object Form1: TForm1
     end
   end
   object ADOConnection1: TADOConnection
+    Connected = True
     ConnectionString = 
       'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=doc.mdb;Persist Sec' +
       'urity Info=False;'
