@@ -1,0 +1,30 @@
+object Form9: TForm9
+  Left = 0
+  Top = 0
+  Caption = #1055#1088#1086#1087#1080#1089#1072#1090#1100
+  ClientHeight = 482
+  ClientWidth = 683
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object IDChelovek: TLabel
+    Left = 576
+    Top = 24
+    Width = 55
+    Height = 13
+    Caption = 'IDChelovek'
+  end
+  object IDKvartira: TLabel
+    Left = 576
+    Top = 56
+    Width = 49
+    Height = 13
+    Caption = 'IDKvartira'
+  end
+end

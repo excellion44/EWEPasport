@@ -79,6 +79,13 @@ object Form2: TForm2
       Font.Style = [fsBold]
       ParentFont = False
     end
+    object Command: TLabel
+      Left = 848
+      Top = 32
+      Width = 47
+      Height = 13
+      Caption = 'Command'
+    end
     object Edit1: TEdit
       Left = 16
       Top = 35

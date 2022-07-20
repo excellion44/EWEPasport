@@ -44,7 +44,9 @@ object Form8: TForm8
     Font.Height = -13
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     ParentFont = False
+    PopupMenu = PopupMenu1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -109,5 +111,16 @@ object Form8: TForm8
     DataSet = ADOQuery2
     Left = 488
     Top = 248
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 552
+    Top = 256
+    object N1: TMenuItem
+      Caption = #1055#1088#1086#1087#1080#1089#1072#1090#1100
+      OnClick = N1Click
+    end
+    object N2: TMenuItem
+      Caption = #1042#1099#1087#1080#1089#1072#1090#1100
+    end
   end
 end

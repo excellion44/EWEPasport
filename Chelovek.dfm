@@ -300,6 +300,7 @@
     end
     object N2: TMenuItem
       Caption = #1057#1076#1077#1083#1072#1090#1100' '#1090#1077#1082#1091#1097#1080#1084
+      OnClick = N2Click
     end
   end
   object PopupMenu2: TPopupMenu

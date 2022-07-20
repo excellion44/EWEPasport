@@ -1,0 +1,54 @@
+//---------------------------------------------------------------------------
+
+#ifndef ChelovekH
+#define ChelovekH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Data.DB.hpp>
+#include <Data.Win.ADODB.hpp>
+#include <Vcl.DBGrids.hpp>
+#include <Vcl.Grids.hpp>
+#include <Vcl.Menus.hpp>
+//---------------------------------------------------------------------------
+class TForm3 : public TForm
+{
+__published:	// IDE-managed Components
+	TEdit *Edit1;
+	TEdit *Edit2;
+	TEdit *Edit3;
+	TLabel *Label1;
+	TLabel *Label2;
+	TLabel *Label3;
+	TDBGrid *DBGrid1;
+	TEdit *Edit4;
+	TLabel *Label4;
+	TLabel *Паспорт;
+	TADOQuery *ADOQuery1;
+	TDataSource *DataSource1;
+	TLabel *PasportID;
+	TButton *Button1;
+	TLabel *IDChelovek;
+	TDBGrid *DBGrid2;
+	TADOQuery *ADOQuery2;
+	TDataSource *DataSource2;
+	TPopupMenu *PopupMenu1;
+	TPopupMenu *PopupMenu2;
+	TMenuItem *N1;
+	TMenuItem *N2;
+	void __fastcall DBGrid1DrawColumnCell(TObject *Sender, const TRect &Rect, int DataCol,
+          TColumn *Column, TGridDrawState State);
+	void __fastcall FormShow(TObject *Sender);
+	void __fastcall DBGrid2DrawColumnCell(TObject *Sender, const TRect &Rect, int DataCol,
+          TColumn *Column, TGridDrawState State);
+	void __fastcall N1Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm3(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm3 *Form3;
+//---------------------------------------------------------------------------
+#endif

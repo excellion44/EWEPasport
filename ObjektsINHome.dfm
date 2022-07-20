@@ -84,7 +84,7 @@ object Form7: TForm7
     end
   end
   object Panel2: TPanel
-    Left = 48
+    Left = 40
     Top = 136
     Width = 257
     Height = 177

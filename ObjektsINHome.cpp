@@ -6,6 +6,7 @@
 #include "ObjektsINHome.h"
 #include "MainForm.h"
 #include "Kvartira.h"
+#include "KvartiraInObjekts.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -26,6 +27,12 @@ void __fastcall TForm7::DBGrid1DblClick(TObject *Sender)
 		Form8->ADOQuery2->SQL->Text = "SELECT * FROM propiski WHERE ID_KVARTIRA = '"+Form8->ID_KVARTIRA->Caption+"' AND OLD ='NO'";
 		Form8->ADOQuery2->Active = true;
 		Form8->ShowModal();
+	}
+	else
+	{
+		Form10->IDObjekts->Caption = ADOQuery1->FieldByName("ID_OBJECKTS")->Value;
+		Form10->TYPEOBJ->Caption = ADOQuery1->FieldByName("OBJECKTS")->Value;
+		Form10->ShowModal();
 	}
 }
 //---------------------------------------------------------------------------
