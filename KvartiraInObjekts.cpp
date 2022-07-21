@@ -5,6 +5,7 @@
 
 #include "KvartiraInObjekts.h"
 #include "MainForm.h"
+#include "Kvartira.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -54,3 +55,13 @@ void __fastcall TForm10::Button1Click(TObject *Sender)
 		Panel1->Visible = false;
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm10::DBGrid1DblClick(TObject *Sender)
+{
+		Form8->ID_KVARTIRA->Caption = ADOQuery1->FieldByName("ID")->Value;
+		Form8->ADOQuery2->Active = false;
+		Form8->ADOQuery2->SQL->Text = "SELECT * FROM propiski WHERE ID_KVARTIRA = '"+Form8->ID_KVARTIRA->Caption+"' AND OLD ='NO'";
+		Form8->ADOQuery2->Active = true;
+		Form8->ShowModal();
+}
+//---------------------------------------------------------------------------
+
