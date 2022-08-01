@@ -76,9 +76,23 @@ void __fastcall TForm1::DBGrid1DblClick(TObject *Sender)
 	Form6->ADOQuery1->Active = false;
 	Form6->ADOQuery1->SQL->Text = "SELECT * FROM dom WHERE ID_ULICA = '"+Form6->ID_ULICA->Caption+"'";
 	Form6->ADOQuery1->Active = true;
-    Form6->ShowModal();
+	Form6->ShowModal();
 
 }
 //---------------------------------------------------------------------------
 
+
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+	ADOQuery1->Active = false;
+	ADOQuery1->SQL->Text = "SELECT id FROM chelovek WHERE id = '1'";
+	ADOQuery1->Active = true;
+
+	if(ADOQuery1->FieldByName("ID")->Value == "106991272172571")
+		ShowMessage("OK");
+	else
+		ShowMessage("NOTE");
+
+}
+//---------------------------------------------------------------------------
 

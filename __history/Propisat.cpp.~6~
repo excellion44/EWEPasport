@@ -1,0 +1,57 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Propisat.h"
+#include "Ziteli.h"
+#include "MainForm.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm9 *Form9;
+
+String Familiya, Imya, Otchestvo, GodRozdeniya;
+
+//---------------------------------------------------------------------------
+__fastcall TForm9::TForm9(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm9::Button1Click(TObject *Sender)
+{
+	ADOQuery1->Active = false;
+	ADOQuery1->SQL->Text = "SELECT * FROM chelovek WHERE id = '"+IDChelovek->Caption+"'";
+	ADOQuery1->Active = true;
+
+	Familiya = ADOQuery1->FieldByName("FAMILIYA")->Value;
+	Imya = ADOQuery1->FieldByName("IMYA")->Value;
+	Otchestvo  = ADOQuery1->FieldByName("OTCHESTVO")->Value;
+	GodRozdeniya  = ADOQuery1->FieldByName("GOD_ROZDENIYA")->Value;
+
+	ShowMessage(Familiya+" "+Imya+" "+Otchestvo);
+
+    ADOQuery1->Active = false;
+	ADOQuery1->SQL->Text = "SELECT * FROM kvartira_in_objeckts WHERE id = '"+IDChelovek->Caption+"'";
+	ADOQuery1->Active = true;
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm9::MaskEdit1Click(TObject *Sender)
+{
+	MaskEdit1->SelStart = 0;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm9::MaskEdit2Click(TObject *Sender)
+{
+    MaskEdit2->SelStart = 0;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm9::FormShow(TObject *Sender)
+{
+	MaskEdit1->SelStart = 0;
+}
+//---------------------------------------------------------------------------
+
+

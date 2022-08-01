@@ -8,6 +8,8 @@
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
 #include <Vcl.Mask.hpp>
+#include <Data.DB.hpp>
+#include <Data.Win.ADODB.hpp>
 //---------------------------------------------------------------------------
 class TForm9 : public TForm
 {
@@ -21,6 +23,7 @@ __published:	// IDE-managed Components
 	TCheckBox *CheckBox1;
 	TButton *Button1;
 	TButton *Button2;
+	TADOQuery *ADOQuery1;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall MaskEdit1Click(TObject *Sender);
 	void __fastcall MaskEdit2Click(TObject *Sender);

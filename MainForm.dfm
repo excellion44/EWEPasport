@@ -124,6 +124,15 @@ object Form1: TForm1
         #1055#1086#1089#1077#1083#1086#1082' '#1042#1077#1090#1083#1091#1078#1089#1082#1080#1081)
     end
   end
+  object Button3: TButton
+    Left = 584
+    Top = 360
+    Width = 75
+    Height = 25
+    Caption = 'Button3'
+    TabOrder = 2
+    OnClick = Button3Click
+  end
   object ADOConnection1: TADOConnection
     Connected = True
     ConnectionString = 

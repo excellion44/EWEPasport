@@ -3,7 +3,7 @@ object Form9: TForm9
   Top = 0
   Caption = #1055#1088#1086#1087#1080#1089#1072#1090#1100
   ClientHeight = 291
-  ClientWidth = 165
+  ClientWidth = 445
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -89,5 +89,11 @@ object Form9: TForm9
     Height = 25
     Caption = #1054#1090#1084#1077#1085#1072
     TabOrder = 4
+  end
+  object ADOQuery1: TADOQuery
+    Connection = Form1.ADOConnection1
+    Parameters = <>
+    Left = 216
+    Top = 152
   end
 end
