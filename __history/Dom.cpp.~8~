@@ -92,7 +92,7 @@ void __fastcall TForm6::DBGrid1DblClick(TObject *Sender)
 	}
 	else
 	{
-		Form8->ID_KVARTIRA->Caption = ADOQuery1->FieldByName("ID")->Value;
+         Form8->ID_KVARTIRA->Caption = ADOQuery1->FieldByName("ID_OBJECKTS")->Value;
 		Form8->ADOQuery2->Active = false;
 		Form8->ADOQuery2->SQL->Text = "SELECT * FROM propiski WHERE ID_KVARTIRA = '"+Form8->ID_KVARTIRA->Caption+"' AND OLD ='NO'";
 		Form8->ADOQuery2->Active = true;
