@@ -42,7 +42,7 @@ void __fastcall TForm3::DBGrid1DrawColumnCell(TObject *Sender, const TRect &Rect
 void __fastcall TForm3::FormShow(TObject *Sender)
 {
 	ADOQuery1->Active = false;
-	ADOQuery1->SQL->Text = "SELECT * FROM chelovek";
+	ADOQuery1->SQL->Text = "SELECT * FROM chelovek WHERE ID = '"+IDChelovek->Caption+"'";
 	ADOQuery1->Active = true;
 
 	   Edit1->Text = ADOQuery1->FieldByName("FAMILIYA")->Value;
