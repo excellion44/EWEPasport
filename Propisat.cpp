@@ -11,7 +11,8 @@
 #pragma resource "*.dfm"
 TForm9 *Form9;
 
-String Familiya, Imya, Otchestvo, GodRozdeniya, GdeKvartira, NomerKv, BukvaKv, TypeObj, IDDoma, NomerDoma, BukvaDoma, IDUlica, Ulica, GorP;
+String Familiya, Imya, Otchestvo, GodRozdeniya, GdeKvartira,
+NomerKv, BukvaKv, TypeObj, Type, IDDoma, IDObj, NomerDoma, BukvaDoma, NomerObj, BukvaObj, IDUlica, Ulica, GorP;
 
 //---------------------------------------------------------------------------
 __fastcall TForm9::TForm9(TComponent* Owner)
@@ -101,28 +102,41 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 	{
 		 NomerKv = ADOQuery1->FieldByName("KVARTIRA")->Value;
 		 BukvaKv = ADOQuery1->FieldByName("BUKVA")->Value;
-		 TypeObj = ADOQuery1->FieldByName("TYPE")->Value;   // пока не используется
-		 IDDoma = ADOQuery1->FieldByName("ID_DOMA")->Value;
+		 IDObj =   ADOQuery1->FieldByName("ID_OBJECKTS")->Value;
+		 Type = ADOQuery1->FieldByName("TYPE")->Value;
+
+		 if(Type != "Частный")
+		 {
+				ADOQuery1->Active = false;
+				ADOQuery1->SQL->Text = "SELECT * FROM dom_objeckts WHERE ID_OBJECKTS = '"+IDObj+"'";
+				ADOQuery1->Active = true;
+
+					NomerObj = ADOQuery1->FieldByName("NOMER_OBJECKTS")->Value;
+					BukvaObj = ADOQuery1->FieldByName("BUKVA_OBJECKTS")->Value;
+					IDDoma = ADOQuery1->FieldByName("ID_DOMA")->Value;
+					TypeObj = ADOQuery1->FieldByName("OBJECKTS")->Value;
 
 
-			ADOQuery1->Active = false;
-			ADOQuery1->SQL->Text = "SELECT * FROM dom WHERE ID = '"+IDDoma+"'";
-			ADOQuery1->Active = true;
+                ADOQuery1->Active = false;
+				ADOQuery1->SQL->Text = "SELECT * FROM dom WHERE ID = '"+IDDoma+"'";
+				ADOQuery1->Active = true;
 
-		 NomerDoma = ADOQuery1->FieldByName("NOMER")->Value;
-		 BukvaDoma = ADOQuery1->FieldByName("BUKVA")->Value;
-		 IDUlica = ADOQuery1->FieldByName("ID_ULICA")->Value;
+					NomerDoma = ADOQuery1->FieldByName("NOMER")->Value;
+					BukvaDoma = ADOQuery1->FieldByName("BUKVA")->Value;
+					IDUlica = ADOQuery1->FieldByName("ID_ULICA")->Value;
 
-			ADOQuery1->Active = false;
-			ADOQuery1->SQL->Text = "SELECT * FROM ULICA WHERE ID = '"+IDUlica+"'";
-			ADOQuery1->Active = true;
+				ADOQuery1->Active = false;
+				ADOQuery1->SQL->Text = "SELECT * FROM ULICA WHERE ID = '"+IDUlica+"'";
+				ADOQuery1->Active = true;
 
-		 Ulica = ADOQuery1->FieldByName("ULICA")->Value;
-		 GorP = ADOQuery1->FieldByName("GOROD_ILI_POSELOK")->Value;
+					Ulica = ADOQuery1->FieldByName("ULICA")->Value;
+					GorP = ADOQuery1->FieldByName("GOROD_ILI_POSELOK")->Value;
 
 
          //Промежуточный тест
-		 ShowMessage(Familiya+" "+Imya+" "+Otchestvo+" Будет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma+" квартира: " + NomerKv + BukvaKv );
+		 ShowMessage(Familiya+" "+Imya+" "+Otchestvo+" Будет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma+" "+
+		 TypeObj+" "+NomerObj+BukvaObj+" квартира: " + NomerKv + BukvaKv );
+		}
 	}
 
 }
