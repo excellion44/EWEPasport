@@ -38,6 +38,7 @@ __published:	// IDE-managed Components
 	TPopupMenu *PopupMenu2;
 	TMenuItem *N1;
 	TMenuItem *N2;
+	TLabel *Label5;
 	void __fastcall DBGrid1DrawColumnCell(TObject *Sender, const TRect &Rect, int DataCol,
           TColumn *Column, TGridDrawState State);
 	void __fastcall FormShow(TObject *Sender);

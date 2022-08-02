@@ -68,31 +68,46 @@
     ParentFont = False
   end
   object Паспорт: TLabel
-    Left = 336
+    Left = 426
     Top = 72
-    Width = 49
-    Height = 13
+    Width = 56
+    Height = 16
     Caption = #1055#1072#1089#1087#1086#1088#1090
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object PasportID: TLabel
-    Left = 400
-    Top = 72
+    Left = 776
+    Top = 16
     Width = 48
     Height = 13
     Caption = 'PasportID'
+    Visible = False
   end
   object IDChelovek: TLabel
-    Left = 635
-    Top = 72
+    Left = 776
+    Top = 35
     Width = 55
     Height = 13
     Caption = 'IDChelovek'
+    Visible = False
+  end
+  object Label5: TLabel
+    Left = 426
+    Top = 306
+    Width = 64
+    Height = 16
+    Caption = #1055#1088#1086#1087#1080#1089#1082#1072
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Edit1: TEdit
     Left = 8
@@ -145,7 +160,7 @@
     DataSource = DataSource1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -163,6 +178,7 @@
         Color = clBtnFace
         Expanded = False
         FieldName = 'SERIYA'
+        Title.Caption = #1057#1077#1088#1080#1103
         Width = 66
         Visible = True
       end
@@ -170,6 +186,7 @@
         Color = clBtnFace
         Expanded = False
         FieldName = 'NOMER'
+        Title.Caption = #1053#1086#1084#1077#1088
         Width = 75
         Visible = True
       end
@@ -177,6 +194,7 @@
         Color = clBtnFace
         Expanded = False
         FieldName = 'KEM'
+        Title.Caption = #1050#1077#1084' '#1074#1099#1076#1072#1085
         Width = 276
         Visible = True
       end
@@ -184,6 +202,7 @@
         Color = clBtnFace
         Expanded = False
         FieldName = 'KOGDA'
+        Title.Caption = #1050#1086#1075#1076#1072
         Width = 94
         Visible = True
       end
@@ -191,6 +210,7 @@
         Color = clBtnFace
         Expanded = False
         FieldName = 'KOD'
+        Title.Caption = #1050#1086#1076' '#1087#1086#1076#1088
         Width = 83
         Visible = True
       end
@@ -198,6 +218,7 @@
         Color = clBtnFace
         Expanded = False
         FieldName = 'MESTO'
+        Title.Caption = #1052#1077#1089#1090#1086' '#1088#1086#1078#1076#1077#1085#1080#1103
         Width = 242
         Visible = True
       end>
@@ -226,9 +247,9 @@
   end
   object DBGrid2: TDBGrid
     Left = 8
-    Top = 312
+    Top = 328
     Width = 877
-    Height = 165
+    Height = 149
     Color = clMenu
     DataSource = DataSource2
     Font.Charset = DEFAULT_CHARSET
