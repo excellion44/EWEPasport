@@ -59,7 +59,7 @@ void __fastcall TForm1::N5Click(TObject *Sender)
 	Form2->ADOQuery1->Active = false;
 	Form2->ADOQuery1->SQL->Text = "SELECT * FROM chelovek";
 	Form2->ADOQuery1->Active = true;
-
+    Form2->Command->Caption="NONE";
 
 	Form2->ShowModal();
 }
@@ -82,17 +82,4 @@ void __fastcall TForm1::DBGrid1DblClick(TObject *Sender)
 //---------------------------------------------------------------------------
 
 
-void __fastcall TForm1::Button3Click(TObject *Sender)
-{
-	ADOQuery1->Active = false;
-	ADOQuery1->SQL->Text = "SELECT id FROM chelovek WHERE id = '1'";
-	ADOQuery1->Active = true;
-
-	if(ADOQuery1->FieldByName("ID")->Value == "106991272172571")
-		ShowMessage("OK");
-	else
-		ShowMessage("NOTE");
-
-}
-//---------------------------------------------------------------------------
 

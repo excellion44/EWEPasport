@@ -22,6 +22,7 @@ __fastcall TForm9::TForm9(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TForm9::Button1Click(TObject *Sender)
 {
+
 	ADOQuery1->Active = false;
 	ADOQuery1->SQL->Text = "SELECT * FROM chelovek WHERE ID = '"+IDChelovek->Caption+"'";
 	ADOQuery1->Active = true;
@@ -105,7 +106,7 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 		 IDObj =   ADOQuery1->FieldByName("ID_OBJECKTS")->Value;
 		 Type = ADOQuery1->FieldByName("TYPE")->Value;
 
-		 if(Type != "Частный")
+		 if(Type != "Частный")  //Если многоквартирный дом
 		 {
 				ADOQuery1->Active = false;
 				ADOQuery1->SQL->Text = "SELECT * FROM dom_objeckts WHERE ID_OBJECKTS = '"+IDObj+"'";
@@ -133,9 +134,30 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 					GorP = ADOQuery1->FieldByName("GOROD_ILI_POSELOK")->Value;
 
 
-         //Промежуточный тест
+		 //Промежуточный тест
 		 ShowMessage(Familiya+" "+Imya+" "+Otchestvo+" Будет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma+" "+
 		 TypeObj+" "+NomerObj+BukvaObj+" квартира: " + NomerKv + BukvaKv );
+		}
+		else if(Type == "Частный")
+		{
+				ADOQuery1->Active = false;
+				ADOQuery1->SQL->Text = "SELECT * FROM dom WHERE ID = '"+IDObj+"'";
+				ADOQuery1->Active = true;
+
+                    NomerDoma = ADOQuery1->FieldByName("NOMER")->Value;
+					BukvaDoma = ADOQuery1->FieldByName("BUKVA")->Value;
+					IDUlica = ADOQuery1->FieldByName("ID_ULICA")->Value;
+
+                ADOQuery1->Active = false;
+				ADOQuery1->SQL->Text = "SELECT * FROM ULICA WHERE ID = '"+IDUlica+"'";
+				ADOQuery1->Active = true;
+
+					Ulica = ADOQuery1->FieldByName("ULICA")->Value;
+					GorP = ADOQuery1->FieldByName("GOROD_ILI_POSELOK")->Value;
+
+
+            //Промежуточный тест
+		 ShowMessage(Familiya+" "+Imya+" "+Otchestvo+" Будет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma);
 		}
 	}
 
