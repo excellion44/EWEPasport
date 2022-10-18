@@ -36,6 +36,14 @@ void __fastcall TForm3::DBGrid1DrawColumnCell(TObject *Sender, const TRect &Rect
 						dbg->Canvas->FillRect(Rect);
 						dbg->DefaultDrawColumnCell(Rect, DataCol, Column, State);
 				}
+
+				if (ADOQuery1->FieldByName("VID_DOC")->Value == "Свидетельство о рождении")
+				{
+						TDBGrid *dbg = (TDBGrid*)Sender;
+						dbg->Canvas->Brush->Color = clMoneyGreen;
+						dbg->Canvas->FillRect(Rect);
+						dbg->DefaultDrawColumnCell(Rect, DataCol, Column, State);
+				}
 }
 //---------------------------------------------------------------------------
 
@@ -49,10 +57,12 @@ void __fastcall TForm3::FormShow(TObject *Sender)
 	   Edit2->Text = ADOQuery1->FieldByName("IMYA")->Value;
 	   Edit3->Text = ADOQuery1->FieldByName("OTCHESTVO")->Value;
 	   Edit4->Text = ADOQuery1->FieldByName("GOD_ROZDENIYA")->Value;
+	   Edit5->Text = ADOQuery1->FieldByName("STATUS")->Value;
+	   Edit6->Text = ADOQuery1->FieldByName("POL")->Value;
 
 
 	ADOQuery1->Active = false;
-	ADOQuery1->SQL->Text = "SELECT * FROM pasport WHERE ID_CHELOVEK = '"+IDChelovek->Caption+"' ORDER BY STATUS desc";
+	ADOQuery1->SQL->Text = "SELECT * FROM pasport WHERE ID_CHELOVEK = '"+IDChelovek->Caption+"' ORDER BY STATUS desc, VID_DOC ASC";
 	ADOQuery1->Active = true;
 
 
@@ -97,15 +107,18 @@ void __fastcall TForm3::N2Click(TObject *Sender)
 {
 		String ID = ADOQuery1->FieldByName("ID")->Value;
 
-		ADOQuery1->SQL->Text = "UPDATE pasport SET STATUS = 'FALSE' WHERE ID_CHELOVEK = '"+IDChelovek->Caption+"' AND STATUS = 'TRUE'";
-		ADOQuery1->ExecSQL();
+		if(ADOQuery1->FieldByName("VID_DOC")->Value == "Паспорт")
+		{
+			ADOQuery1->SQL->Text = "UPDATE pasport SET STATUS = 'FALSE' WHERE ID_CHELOVEK = '"+IDChelovek->Caption+"' AND STATUS = 'TRUE'";
+			ADOQuery1->ExecSQL();
 
-		ADOQuery1->SQL->Text = "UPDATE pasport SET STATUS = 'TRUE' WHERE ID = '"+ID+"'";
-		ADOQuery1->ExecSQL();
+			ADOQuery1->SQL->Text = "UPDATE pasport SET STATUS = 'TRUE' WHERE ID = '"+ID+"'";
+			ADOQuery1->ExecSQL();
 
-		ADOQuery1->Active = false;
-		ADOQuery1->SQL->Text = "SELECT * FROM pasport WHERE ID_CHELOVEK = '"+IDChelovek->Caption+"' ORDER BY STATUS desc";
-		ADOQuery1->Active = true;
+			ADOQuery1->Active = false;
+			ADOQuery1->SQL->Text = "SELECT * FROM pasport WHERE ID_CHELOVEK = '"+IDChelovek->Caption+"' ORDER BY STATUS desc";
+			ADOQuery1->Active = true;
+        }
 }
 //---------------------------------------------------------------------------
 

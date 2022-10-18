@@ -72,6 +72,8 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 
 //============================== КОНЕЦ проверяем где квартира в kvartira_in_objeckts или  dom_objeckts  ============================
 
+
+//============================== Если квартира в  dom_objeckts  ============================
 	if(GdeKvartira == "dom_objeckts")
 	{
 		 NomerKv = ADOQuery1->FieldByName("NOMER_OBJECKTS")->Value;
@@ -79,26 +81,36 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 		 TypeObj = ADOQuery1->FieldByName("OBJECKTS")->Value;   // пока не используется
 		 IDDoma = ADOQuery1->FieldByName("ID_DOMA")->Value;
 
+		 ShowMessage("1");
+
 
 			ADOQuery1->Active = false;
 			ADOQuery1->SQL->Text = "SELECT * FROM dom WHERE ID = '"+IDDoma+"'";
 			ADOQuery1->Active = true;
 
+			ShowMessage("2");
+
 		 NomerDoma = ADOQuery1->FieldByName("NOMER")->Value;
-		 BukvaDoma = ADOQuery1->FieldByName("BUKVA")->Value;
+		 //BukvaDoma = ADOQuery1->FieldByName("BUKVA")->Value;
 		 IDUlica = ADOQuery1->FieldByName("ID_ULICA")->Value;
+		 ShowMessage("3");
 
 			ADOQuery1->Active = false;
 			ADOQuery1->SQL->Text = "SELECT * FROM ULICA WHERE ID = '"+IDUlica+"'";
 			ADOQuery1->Active = true;
 
+			ShowMessage("4");
+
 		 Ulica = ADOQuery1->FieldByName("ULICA")->Value;
 		 GorP = ADOQuery1->FieldByName("GOROD_ILI_POSELOK")->Value;
 
+		 ShowMessage("5");
 
          //Промежуточный тест
 		 ShowMessage(Familiya+" "+Imya+" "+Otchestvo+" Будет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma+" квартира: " + NomerKv + BukvaKv );
 	}
+
+	//============================== Если квартира в  kvartira_in_objeckts  ============================
 	if(GdeKvartira == "kvartira_in_objeckts")
 	{
 		 NomerKv = ADOQuery1->FieldByName("KVARTIRA")->Value;

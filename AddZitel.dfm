@@ -3,7 +3,7 @@ object Form4: TForm4
   Top = 0
   Hint = #1074#1072#1099#1087#1074#1099#1072
   Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1046#1080#1090#1077#1083#1103
-  ClientHeight = 153
+  ClientHeight = 145
   ClientWidth = 499
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -53,6 +53,20 @@ object Form4: TForm4
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 53
+    Width = 80
+    Height = 13
+    Caption = #1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
+  end
+  object Label5: TLabel
+    Left = 290
+    Top = 53
+    Width = 19
+    Height = 13
+    Caption = #1055#1086#1083
   end
   object Edit1: TEdit
     Left = 8
@@ -108,17 +122,39 @@ object Form4: TForm4
   end
   object Button1: TButton
     Left = 200
-    Top = 120
+    Top = 104
     Width = 75
     Height = 25
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
     TabOrder = 4
     OnClick = Button1Click
   end
+  object STATUS: TComboBox
+    Left = 130
+    Top = 68
+    Width = 145
+    Height = 21
+    TabOrder = 5
+    Text = #1044#1077#1077#1089#1087#1086#1089#1086#1073#1085#1099#1081
+    Items.Strings = (
+      #1044#1077#1077#1089#1087#1086#1089#1086#1073#1085#1099#1081
+      #1053#1077#1076#1077#1077#1089#1087#1086#1089#1086#1073#1085#1099#1081)
+  end
+  object POL: TComboBox
+    Left = 288
+    Top = 68
+    Width = 49
+    Height = 21
+    TabOrder = 6
+    Text = #1052#1091#1078'.'
+    Items.Strings = (
+      #1052#1091#1078'.'
+      #1046#1077#1085'.')
+  end
   object CHELOVEK: TADOQuery
     Connection = Form1.ADOConnection1
     Parameters = <>
-    Left = 344
-    Top = 80
+    Left = 432
+    Top = 72
   end
 end

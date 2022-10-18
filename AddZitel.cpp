@@ -33,8 +33,13 @@ void __fastcall TForm4::Button1Click(TObject *Sender)
 
 
 
-		CHELOVEK->SQL->Text = "INSERT INTO chelovek (ID, FAMILIYA, IMYA, OTCHESTVO, GOD_ROZDENIYA, GOD_ROZDENIYA_UNIX) VALUES ('"+ID+"','"+Edit1->Text+"','"+Edit2->Text+"','"+Edit3->Text+"','"+data_rozdeniya.SubString(0,10)+"',"+DATA_R_UNIX+")";
-        CHELOVEK->ExecSQL();
+		CHELOVEK->SQL->Text = "INSERT INTO chelovek (ID, FAMILIYA, IMYA, OTCHESTVO, GOD_ROZDENIYA, GOD_ROZDENIYA_UNIX, STATUS, POL) VALUES ('"+ID+"','"+Edit1->Text+"','"+Edit2->Text+"','"+Edit3->Text+"','"+data_rozdeniya.SubString(0,10)+"',"+DATA_R_UNIX+",'"+STATUS->Text+"','"+POL->Text+"')";
+		CHELOVEK->ExecSQL();
+
+		Edit1->Text = "";
+		Edit2->Text = "";
+		Edit3->Text = "";
+		Form4->Close();
 
 
 }

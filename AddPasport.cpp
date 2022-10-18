@@ -26,11 +26,11 @@ void __fastcall TForm5::Button1Click(TObject *Sender)
 			 ID = ID + IntToStr(random(15));
 		}
 
-		ADOQuery1->SQL->Text = "INSERT INTO pasport (ID, ID_CHELOVEK, SERIYA, NOMER, KEM, KOGDA, KOD, MESTO, STATUS) VALUES ('"+ID+"','"+IDChelovek->Caption+"','"+Edit1->Text+"','"+Edit2->Text+"','"+Edit3->Text+"','"+KOGDA->Date+"','"+Edit4->Text+"','"+Edit5->Text+"','FALSE')";
+		ADOQuery1->SQL->Text = "INSERT INTO pasport (ID, ID_CHELOVEK, SERIYA, NOMER, KEM, KOGDA, KOD, MESTO, STATUS, VID_DOC) VALUES ('"+ID+"','"+IDChelovek->Caption+"','"+Edit1->Text+"','"+Edit2->Text+"','"+Edit3->Text+"','"+KOGDA->Date+"','"+Edit4->Text+"','"+Edit5->Text+"','FALSE','"+VID_DOC->Text+"')";
 		ADOQuery1->ExecSQL();
 
 		Form3->ADOQuery1->Active = false;
-		Form3->ADOQuery1->SQL->Text = "SELECT * FROM pasport WHERE ID_CHELOVEK = '"+IDChelovek->Caption+"'";
+		Form3->ADOQuery1->SQL->Text = "SELECT * FROM pasport WHERE ID_CHELOVEK = '"+IDChelovek->Caption+"' ORDER BY STATUS desc, VID_DOC ASC";
 		Form3->ADOQuery1->Active = true;
 
 		Close();
