@@ -5,6 +5,7 @@
 
 #include "AddZitel.h"
 #include "MainForm.h"
+#include "Chelovek.h"
 #include "DateUtils.hpp"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -40,6 +41,9 @@ void __fastcall TForm4::Button1Click(TObject *Sender)
 		Edit2->Text = "";
 		Edit3->Text = "";
 		Form4->Close();
+
+		Form3->IDChelovek->Caption =  ID;
+		Form3->ShowModal();
 
 
 }

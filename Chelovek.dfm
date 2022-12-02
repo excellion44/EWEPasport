@@ -81,16 +81,16 @@
     ParentFont = False
   end
   object PasportID: TLabel
-    Left = 776
-    Top = 16
+    Left = 944
+    Top = 712
     Width = 48
     Height = 13
     Caption = 'PasportID'
     Visible = False
   end
   object IDChelovek: TLabel
-    Left = 776
-    Top = 35
+    Left = 944
+    Top = 731
     Width = 55
     Height = 13
     Caption = 'IDChelovek'
@@ -128,6 +128,19 @@
     Width = 22
     Height = 13
     Caption = #1055#1086#1083
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 648
+    Top = 16
+    Width = 70
+    Height = 13
+    Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -339,6 +352,13 @@
     Height = 21
     Enabled = False
     TabOrder = 8
+  end
+  object Memo1: TMemo
+    Left = 400
+    Top = 32
+    Width = 612
+    Height = 102
+    TabOrder = 9
   end
   object ADOQuery1: TADOQuery
     Connection = Form1.ADOConnection1

@@ -43,6 +43,8 @@ __published:	// IDE-managed Components
 	TEdit *Edit6;
 	TLabel *Label6;
 	TLabel *Label7;
+	TMemo *Memo1;
+	TLabel *Label8;
 	void __fastcall DBGrid1DrawColumnCell(TObject *Sender, const TRect &Rect, int DataCol,
           TColumn *Column, TGridDrawState State);
 	void __fastcall FormShow(TObject *Sender);

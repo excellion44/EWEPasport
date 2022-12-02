@@ -90,6 +90,14 @@ object Form9: TForm9
     Caption = #1054#1090#1084#1077#1085#1072
     TabOrder = 4
   end
+  object ComboBox1: TComboBox
+    Left = 160
+    Top = 37
+    Width = 145
+    Height = 21
+    TabOrder = 5
+    Text = #1054#1089#1085#1086#1074#1072#1085#1080#1077
+  end
   object ADOQuery1: TADOQuery
     Connection = Form1.ADOConnection1
     Parameters = <>

@@ -15,7 +15,7 @@ object Form5: TForm5
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 208
+    Left = 458
     Top = 0
     Width = 34
     Height = 13
@@ -28,7 +28,7 @@ object Form5: TForm5
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 287
+    Left = 537
     Top = 0
     Width = 37
     Height = 13
@@ -112,15 +112,28 @@ object Form5: TForm5
     Font.Style = [fsBold]
     ParentFont = False
   end
+  object Label8: TLabel
+    Left = 288
+    Top = 3
+    Width = 56
+    Height = 13
+    Caption = #1054#1085#1086#1074#1072#1085#1080#1077
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object Edit1: TEdit
-    Left = 208
+    Left = 458
     Top = 19
     Width = 65
     Height = 21
     TabOrder = 0
   end
   object Edit2: TEdit
-    Left = 287
+    Left = 537
     Top = 19
     Width = 90
     Height = 21
@@ -175,6 +188,18 @@ object Form5: TForm5
     Items.Strings = (
       #1055#1072#1089#1087#1086#1088#1090
       #1057#1074#1080#1076#1077#1090#1077#1083#1100#1089#1090#1074#1086' '#1086' '#1088#1086#1078#1076#1077#1085#1080#1080)
+  end
+  object ComboBox1: TComboBox
+    Left = 197
+    Top = 19
+    Width = 255
+    Height = 21
+    TabOrder = 8
+    Text = #1055#1077#1088#1074#1080#1095#1085#1086#1077
+    Items.Strings = (
+      #1055#1077#1088#1074#1080#1095#1085#1086#1077
+      #1059#1090#1077#1088#1103
+      #1057#1084#1077#1085#1072' '#1092#1072#1084#1080#1083#1080#1080)
   end
   object ADOQuery1: TADOQuery
     Connection = Form1.ADOConnection1
