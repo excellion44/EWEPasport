@@ -43,7 +43,7 @@ object Form9: TForm9
     Height = 13
     Caption = #1044#1072#1090#1072' '#1074#1099#1087#1080#1089#1082#1080
   end
-  object MaskEdit1: TMaskEdit
+  object DataPropiski: TMaskEdit
     Left = 24
     Top = 37
     Width = 118
@@ -52,10 +52,10 @@ object Form9: TForm9
     MaxLength = 10
     TabOrder = 0
     Text = '  .  .    '
-    OnClick = MaskEdit1Click
+    OnClick = DataPropiskiClick
   end
-  object MaskEdit2: TMaskEdit
-    Left = 24
+  object DataVypiski: TMaskEdit
+    Left = 26
     Top = 85
     Width = 120
     Height = 21
@@ -63,7 +63,7 @@ object Form9: TForm9
     MaxLength = 10
     TabOrder = 1
     Text = '  .  .    '
-    OnClick = MaskEdit2Click
+    OnClick = DataVypiskiClick
   end
   object CheckBox1: TCheckBox
     Left = 24

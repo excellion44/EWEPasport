@@ -9,10 +9,12 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
+#include "DateUtils.hpp"
 TForm9 *Form9;
 
 String Familiya, Imya, Otchestvo, GodRozdeniya, GdeKvartira,
-NomerKv, BukvaKv, TypeObj, Type, IDDoma, IDObj, NomerDoma, BukvaDoma, NomerObj, BukvaObj, IDUlica, Ulica, GorP;
+NomerKv, BukvaKv, TypeObj, Type, IDDoma, IDObj, NomerDoma, BukvaDoma, NomerObj, BukvaObj, IDUlica, Ulica, GorP,
+DATA_VYPISKI, DATA_VYPISKI_UNIX, OLD;
 
 //---------------------------------------------------------------------------
 __fastcall TForm9::TForm9(TComponent* Owner)
@@ -146,9 +148,53 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 					GorP = ADOQuery1->FieldByName("GOROD_ILI_POSELOK")->Value;
 
 
+				//----------------------------------ПРОПИСКА - ЗАНОСИМ В БАЗУ  [ТЕСТ]---------------------------------------
+
+
+
+		 if(CheckBox1->Checked == true)   //Если стоит галочка по настоящее время
+		  {
+				ADOQuery1->Active = false;
+				ADOQuery1->SQL->Text = "SELECT * FROM propiski WHERE ID_CHELOVEK = '"+IDChelovek->Caption+"' AND OLD = 'NO'";  //Ищем прописку у которой пометка что она не старая
+				ADOQuery1->Active = true;
+
+
+				try
+				{
+						//OLD =  SearchChel->FieldByName("OLD")->Value;
+                }
+                catch(Exception &e)
+				{
+                }
+
+
+				 if(ADOQuery1->FieldByName("OLD")->Value == "NO")
+				 {
+						ShowMessage("нужно выписать человека со старого адреса");
+						return;
+				 }
+				DATA_VYPISKI = "По н/в";
+				DATA_VYPISKI_UNIX = 0;
+				OLD = "NO";
+		  }
+          else
+          {
+				DATA_VYPISKI = DataVypiski->Text;
+				DATA_VYPISKI_UNIX = DateTimeToUnix(DataVypiski->Text);
+				OLD = "YES";
+		  }
+
+
+		 //----------------------------------ПРОПИСКА - ЗАНОСИМ В БАЗУ КОНЕЦ [ТЕСТ]---------------------------------------
+
+				ADOQuery1->SQL->Text = "INSERT INTO chelovek (FAMILIYA, IMYA, OTCHESTVO, GOD_ROZDENIYA, ID_CHELOVEK, ID_KVARTIRA, DATA_PROPISKI, DATA_VYPISKI, OLD, ADRES, TYPE, DATA_PROPISKI_UNIX, DATA_VYPISKI_UNIX) VALUES ('";
+				ADOQuery1->ExecSQL();
+
+
+
 		 //Промежуточный тест
-		 ShowMessage(Familiya+" "+Imya+" "+Otchestvo+" Будет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma+" "+
-		 TypeObj+" "+NomerObj+BukvaObj+" квартира: " + NomerKv + BukvaKv );
+		 //ShowMessage(Familiya+" "+Imya+" "+Otchestvo+" Будет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma+" "+
+		// TypeObj+" "+NomerObj+BukvaObj+" квартира: " + NomerKv + BukvaKv );
 		}
 		else if(Type == "Частный")
 		{
@@ -169,18 +215,18 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 
 
             //Промежуточный тест
-		 ShowMessage(Familiya+" "+Imya+" "+Otchestvo+" Будет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma);
+		 //ShowMessage(Familiya+" "+Imya+" "+Otchestvo+" Будет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma);
 		}
 	}
 
 }
 //---------------------------------------------------------------------------
-void __fastcall TForm9::MaskEdit1Click(TObject *Sender)
+void __fastcall TForm9::DataPropiskiClick(TObject *Sender)
 {
 	MaskEdit1->SelStart = 0;
 }
 //---------------------------------------------------------------------------
-void __fastcall TForm9::MaskEdit2Click(TObject *Sender)
+void __fastcall TForm9::DataVypiskiClick(TObject *Sender)
 {
     MaskEdit2->SelStart = 0;
 }
