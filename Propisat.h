@@ -24,11 +24,13 @@ __published:	// IDE-managed Components
 	TButton *Button1;
 	TButton *Button2;
 	TADOQuery *ADOQuery1;
-	TComboBox *ComboBox1;
+	TComboBox *VidReg;
+	TLabel *Label3;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall DataPropiskiClick(TObject *Sender);
 	void __fastcall DataVypiskiClick(TObject *Sender);
 	void __fastcall FormShow(TObject *Sender);
+	void __fastcall VidRegChange(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm9(TComponent* Owner);

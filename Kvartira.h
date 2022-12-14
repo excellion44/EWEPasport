@@ -28,6 +28,8 @@ __published:	// IDE-managed Components
 	TMenuItem *N2;
 	void __fastcall DBGrid2DblClick(TObject *Sender);
 	void __fastcall N1Click(TObject *Sender);
+	void __fastcall DBGrid2DrawColumnCell(TObject *Sender, const TRect &Rect, int DataCol,
+          TColumn *Column, TGridDrawState State);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm8(TComponent* Owner);

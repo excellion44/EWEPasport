@@ -38,3 +38,16 @@ void __fastcall TForm8::N1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm8::DBGrid2DrawColumnCell(TObject *Sender, const TRect &Rect,
+          int DataCol, TColumn *Column, TGridDrawState State)
+{
+    			if(ADOQuery2->FieldByName("TYPE")->Value == "Временная")
+				{
+						TDBGrid *dbg = (TDBGrid*)Sender;
+						dbg->Canvas->Brush->Color = clSkyBlue;
+						dbg->Canvas->FillRect(Rect);
+						dbg->DefaultDrawColumnCell(Rect, DataCol, Column, State);
+				}
+}
+//---------------------------------------------------------------------------
+

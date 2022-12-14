@@ -148,7 +148,7 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 
 		  ADRES = GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma+" квартира: " + NomerKv + BukvaKv;
 
-		  ADOQuery1->SQL->Text = "INSERT INTO propiski (FAMILIYA, IMYA, OTCHESTVO, GOD_ROZDENIYA, ID_CHELOVEK, ID_KVARTIRA, DATA_PROPISKI, DATA_VYPISKI, OLD, ADRES, TYPE, DATA_PROPISKI_UNIX, DATA_VYPISKI_UNIX) VALUES ('"+Familiya+"','"+Imya+"','"+Otchestvo+"','"+GodRozdeniya+"','"+IDChelovek->Caption+"','"+IDKvartira->Caption+"','"+DataPropiski->Text+"','"+DATA_VYPISKI+"','"+OLD+"','"+ADRES+"','"+OLD+"',"+DATA_PROPISKI+","+StrToInt(DATA_VYPISKI_UNIX)+")";
+		  ADOQuery1->SQL->Text = "INSERT INTO propiski (FAMILIYA, IMYA, OTCHESTVO, GOD_ROZDENIYA, ID_CHELOVEK, ID_KVARTIRA, DATA_PROPISKI, DATA_VYPISKI, OLD, ADRES, TYPE, DATA_PROPISKI_UNIX, DATA_VYPISKI_UNIX) VALUES ('"+Familiya+"','"+Imya+"','"+Otchestvo+"','"+GodRozdeniya+"','"+IDChelovek->Caption+"','"+IDKvartira->Caption+"','"+DataPropiski->Text+"','"+DATA_VYPISKI+"','"+OLD+"','"+ADRES+"','"+VidReg->Text+"',"+DATA_PROPISKI+","+StrToInt(DATA_VYPISKI_UNIX)+")";
 		  ADOQuery1->ExecSQL();
 
 		 //ѕромежуточный тест
@@ -221,17 +221,21 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 				DATA_VYPISKI_UNIX = 0;
 				OLD = "NO";
 		  }
-          else
-          {
+		  else
+		  {
 				DATA_VYPISKI = DataVypiski->Text;
 				DATA_VYPISKI_UNIX = DateTimeToUnix(DataVypiski->Text);
 				OLD = "YES";
 		  }
 
-           int DATA_PROPISKI =  DateTimeToUnix(StrToDate(DataPropiski->Text));
+		   int DATA_PROPISKI =  DateTimeToUnix(StrToDate(DataPropiski->Text));
 
-		  ADRES = GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma+" квартира: " + NomerKv + BukvaKv;
-			ShowMessage(OLD+Familiya+" "+Imya+" "+Otchestvo+" Ѕудет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma+" "+TypeObj+" "+NomerObj+" квартира: " + NomerKv + BukvaKv );
+
+		  ADRES = GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma+" "+TypeObj+" "+NomerObj+" квартира: " + NomerKv + BukvaKv;
+
+		  ADOQuery1->SQL->Text = "INSERT INTO propiski (FAMILIYA, IMYA, OTCHESTVO, GOD_ROZDENIYA, ID_CHELOVEK, ID_KVARTIRA, DATA_PROPISKI, DATA_VYPISKI, OLD, ADRES, TYPE, DATA_PROPISKI_UNIX, DATA_VYPISKI_UNIX) VALUES ('"+Familiya+"','"+Imya+"','"+Otchestvo+"','"+GodRozdeniya+"','"+IDChelovek->Caption+"','"+IDKvartira->Caption+"','"+DataPropiski->Text+"','"+DATA_VYPISKI+"','"+OLD+"','"+ADRES+"','"+VidReg->Text+"',"+DATA_PROPISKI+","+StrToInt(DATA_VYPISKI_UNIX)+")";
+		  ADOQuery1->ExecSQL();
+			//ShowMessage(OLD+Familiya+" "+Imya+" "+Otchestvo+" Ѕудет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma+" "+TypeObj+" "+NomerObj+" квартира: " + NomerKv + BukvaKv );
 		  //ADOQuery1->SQL->Text = "INSERT INTO propiski (FAMILIYA, IMYA, OTCHESTVO, GOD_ROZDENIYA, ID_CHELOVEK, ID_KVARTIRA, DATA_PROPISKI, DATA_VYPISKI, OLD, ADRES, TYPE, DATA_PROPISKI_UNIX, DATA_VYPISKI_UNIX) VALUES ('"+Familiya+"','"+Imya+"','"+Otchestvo+"','"+GodRozdeniya+"','"+IDChelovek->Caption+"','"+IDKvartira->Caption+"','"+DataPropiski->Text+"','"+DATA_VYPISKI+"','"+OLD+"','"+ADRES+"','"+OLD+"',"+DATA_PROPISKI+","+StrToInt(DATA_VYPISKI_UNIX)+")";
 		  //ADOQuery1->ExecSQL();
 
@@ -258,6 +262,47 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 					GorP = ADOQuery1->FieldByName("GOROD_ILI_POSELOK")->Value;
 
 
+
+
+		  if(CheckBox1->Checked == true)   //≈сли стоит галочка по насто€щее врем€
+		  {
+				ADOQuery1->Active = false;
+				ADOQuery1->SQL->Text = "SELECT * FROM propiski WHERE ID_CHELOVEK = '"+IDChelovek->Caption+"' AND OLD = 'NO'";  //»щем прописку у которой пометка что она не стара€
+				ADOQuery1->Active = true;
+
+
+				try
+				{
+						//OLD =  SearchChel->FieldByName("OLD")->Value;
+				}
+				catch(Exception &e)
+				{
+				}
+
+
+				 if(ADOQuery1->FieldByName("OLD")->Value == "NO")
+				 {
+						ShowMessage("нужно выписать человека со старого адреса");
+						return;
+				 }
+				DATA_VYPISKI = "ѕо н/в";
+				DATA_VYPISKI_UNIX = 0;
+				OLD = "NO";
+		  }
+		  else
+		  {
+				DATA_VYPISKI = DataVypiski->Text;
+				DATA_VYPISKI_UNIX = DateTimeToUnix(DataVypiski->Text);
+				OLD = "YES";
+		  }
+
+		   int DATA_PROPISKI =  DateTimeToUnix(StrToDate(DataPropiski->Text));
+
+
+		  ADRES = GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma;
+
+		  ADOQuery1->SQL->Text = "INSERT INTO propiski (FAMILIYA, IMYA, OTCHESTVO, GOD_ROZDENIYA, ID_CHELOVEK, ID_KVARTIRA, DATA_PROPISKI, DATA_VYPISKI, OLD, ADRES, TYPE, DATA_PROPISKI_UNIX, DATA_VYPISKI_UNIX) VALUES ('"+Familiya+"','"+Imya+"','"+Otchestvo+"','"+GodRozdeniya+"','"+IDChelovek->Caption+"','"+IDKvartira->Caption+"','"+DataPropiski->Text+"','"+DATA_VYPISKI+"','"+OLD+"','"+ADRES+"','"+VidReg->Text+"',"+DATA_PROPISKI+","+StrToInt(DATA_VYPISKI_UNIX)+")";
+		  ADOQuery1->ExecSQL();
 			//ѕромежуточный тест
 		 ShowMessage(Familiya+" "+Imya+" "+Otchestvo+" Ѕудет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma);
 		}
@@ -281,5 +326,19 @@ void __fastcall TForm9::FormShow(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+
+
+void __fastcall TForm9::VidRegChange(TObject *Sender)
+{
+	if(VidReg->Text == "ѕосто€нна€")
+	{
+		CheckBox1->Checked = true;
+	}
+	if(VidReg->Text == "¬ременна€")
+	{
+		CheckBox1->Checked = false;
+	}
+}
+//---------------------------------------------------------------------------
 
 

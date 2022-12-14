@@ -297,7 +297,7 @@
     Top = 525
     Width = 1004
     Height = 149
-    Color = clMenu
+    Color = clBtnFace
     DataSource = DataSource2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -334,6 +334,13 @@
         Expanded = False
         FieldName = 'DATA_VYPISKI'
         Width = 128
+        Visible = True
+      end
+      item
+        Color = clBtnFace
+        Expanded = False
+        FieldName = 'TYPE'
+        Width = 124
         Visible = True
       end>
   end

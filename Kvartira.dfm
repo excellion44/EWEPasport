@@ -53,18 +53,43 @@ object Form8: TForm8
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnDrawColumnCell = DBGrid2DrawColumnCell
     OnDblClick = DBGrid2DblClick
     Columns = <
       item
         Expanded = False
-        FieldName = 'FIO_CHELOVEK'
-        Title.Caption = #1060#1048#1054
+        FieldName = 'FAMILIYA'
+        Title.Caption = #1060#1072#1084#1080#1083#1080#1103
         Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -11
         Title.Font.Name = 'Tahoma'
         Title.Font.Style = [fsBold]
-        Width = 299
+        Width = 158
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'IMYA'
+        Title.Caption = #1048#1084#1103
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 93
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'OTCHESTVO'
+        Title.Caption = #1054#1090#1095#1077#1089#1090#1074#1086
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 105
         Visible = True
       end
       item
@@ -89,6 +114,18 @@ object Form8: TForm8
         Title.Font.Name = 'Tahoma'
         Title.Font.Style = [fsBold]
         Width = 127
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TYPE'
+        Title.Caption = #1058#1080#1087
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 99
         Visible = True
       end>
   end

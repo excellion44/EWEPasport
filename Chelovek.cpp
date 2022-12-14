@@ -92,6 +92,14 @@ void __fastcall TForm3::DBGrid2DrawColumnCell(TObject *Sender, const TRect &Rect
 						dbg->Canvas->FillRect(Rect);
 						dbg->DefaultDrawColumnCell(Rect, DataCol, Column, State);
 				}
+
+				if(ADOQuery2->FieldByName("TYPE")->Value == "Временная")
+				{
+						TDBGrid *dbg = (TDBGrid*)Sender;
+						dbg->Canvas->Brush->Color = clSkyBlue;
+						dbg->Canvas->FillRect(Rect);
+						dbg->DefaultDrawColumnCell(Rect, DataCol, Column, State);
+				}
 }
 //---------------------------------------------------------------------------
 
