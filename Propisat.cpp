@@ -6,6 +6,7 @@
 #include "Propisat.h"
 #include "Ziteli.h"
 #include "MainForm.h"
+#include "Kvartira.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -141,7 +142,15 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
           {
 				DATA_VYPISKI = DataVypiski->Text;
 				DATA_VYPISKI_UNIX = DateTimeToUnix(DataVypiski->Text);
-				OLD = "YES";
+
+				if(VidReg->Text == "Постоянная")
+				{
+					OLD = "YES";
+				}
+				if(VidReg->Text == "Временная")
+				{
+					OLD = "NO";
+				}
 		  }
 
 		  int DATA_PROPISKI =  DateTimeToUnix(StrToDate(DataPropiski->Text));
@@ -225,7 +234,14 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 		  {
 				DATA_VYPISKI = DataVypiski->Text;
 				DATA_VYPISKI_UNIX = DateTimeToUnix(DataVypiski->Text);
-				OLD = "YES";
+				if(VidReg->Text == "Постоянная")
+				{
+					OLD = "YES";
+				}
+				if(VidReg->Text == "Временная")
+				{
+					OLD = "NO";
+				}
 		  }
 
 		   int DATA_PROPISKI =  DateTimeToUnix(StrToDate(DataPropiski->Text));
@@ -293,7 +309,14 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 		  {
 				DATA_VYPISKI = DataVypiski->Text;
 				DATA_VYPISKI_UNIX = DateTimeToUnix(DataVypiski->Text);
-				OLD = "YES";
+				if(VidReg->Text == "Постоянная")
+				{
+					OLD = "YES";
+				}
+				if(VidReg->Text == "Временная")
+				{
+					OLD = "NO";
+				}
 		  }
 
 		   int DATA_PROPISKI =  DateTimeToUnix(StrToDate(DataPropiski->Text));
@@ -304,10 +327,16 @@ void __fastcall TForm9::Button1Click(TObject *Sender)
 		  ADOQuery1->SQL->Text = "INSERT INTO propiski (FAMILIYA, IMYA, OTCHESTVO, GOD_ROZDENIYA, ID_CHELOVEK, ID_KVARTIRA, DATA_PROPISKI, DATA_VYPISKI, OLD, ADRES, TYPE, DATA_PROPISKI_UNIX, DATA_VYPISKI_UNIX) VALUES ('"+Familiya+"','"+Imya+"','"+Otchestvo+"','"+GodRozdeniya+"','"+IDChelovek->Caption+"','"+IDKvartira->Caption+"','"+DataPropiski->Text+"','"+DATA_VYPISKI+"','"+OLD+"','"+ADRES+"','"+VidReg->Text+"',"+DATA_PROPISKI+","+StrToInt(DATA_VYPISKI_UNIX)+")";
 		  ADOQuery1->ExecSQL();
 			//Промежуточный тест
-		 ShowMessage(Familiya+" "+Imya+" "+Otchestvo+" Будет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma);
+		 //ShowMessage(Familiya+" "+Imya+" "+Otchestvo+" Будет прописан по адресу "+ GorP +" улица "+Ulica+" дом: "+NomerDoma + BukvaDoma);
 		}
 	}
 
+
+	Form2->Close();
+	Form8->ADOQuery2->Active = false;
+	Form8->ADOQuery2->SQL->Text = "SELECT * FROM propiski WHERE ID_KVARTIRA = '"+Form8->ID_KVARTIRA->Caption+"'";
+	Form8->ADOQuery2->Active = true;
+	Form9->Close();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm9::DataPropiskiClick(TObject *Sender)

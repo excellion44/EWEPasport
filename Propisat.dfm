@@ -2,8 +2,8 @@ object Form9: TForm9
   Left = 0
   Top = 0
   Caption = #1055#1088#1086#1087#1080#1089#1072#1090#1100
-  ClientHeight = 449
-  ClientWidth = 709
+  ClientHeight = 188
+  ClientWidth = 436
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,15 +16,15 @@ object Form9: TForm9
   PixelsPerInch = 96
   TextHeight = 13
   object IDChelovek: TLabel
-    Left = 41
-    Top = 328
+    Left = 239
+    Top = 101
     Width = 55
     Height = 13
     Caption = 'IDChelovek'
   end
   object IDKvartira: TLabel
-    Left = 41
-    Top = 360
+    Left = 313
+    Top = 101
     Width = 49
     Height = 13
     Caption = 'IDKvartira'
@@ -84,7 +84,7 @@ object Form9: TForm9
   end
   object Button1: TButton
     Left = 20
-    Top = 272
+    Top = 136
     Width = 41
     Height = 25
     Caption = #1054#1050
@@ -93,7 +93,7 @@ object Form9: TForm9
   end
   object Button2: TButton
     Left = 67
-    Top = 272
+    Top = 136
     Width = 75
     Height = 25
     Caption = #1054#1090#1084#1077#1085#1072
@@ -114,7 +114,7 @@ object Form9: TForm9
   object ADOQuery1: TADOQuery
     Connection = Form1.ADOConnection1
     Parameters = <>
-    Left = 212
-    Top = 264
+    Left = 164
+    Top = 80
   end
 end
