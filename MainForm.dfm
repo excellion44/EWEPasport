@@ -131,6 +131,7 @@ object Form1: TForm1
     Height = 25
     Caption = 'Button3'
     TabOrder = 2
+    OnClick = Button3Click
   end
   object ADOConnection1: TADOConnection
     Connected = True

@@ -8,6 +8,7 @@
 #include "Chelovek.h"
 #include "Ziteli.h"
 #include "Propisat.h"
+#include "Vypisat.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -51,4 +52,10 @@ void __fastcall TForm8::DBGrid2DrawColumnCell(TObject *Sender, const TRect &Rect
 }
 //---------------------------------------------------------------------------
 
+
+void __fastcall TForm8::N2Click(TObject *Sender)
+{
+     Form11->ShowModal();
+}
+//---------------------------------------------------------------------------
 

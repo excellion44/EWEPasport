@@ -7,6 +7,7 @@
 #include "Ziteli.h"
 #include "AddZitel.h"
 #include "Dom.h"
+#include "DateUtils.hpp"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -82,4 +83,24 @@ void __fastcall TForm1::DBGrid1DblClick(TObject *Sender)
 //---------------------------------------------------------------------------
 
 
+
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+	ADOQuery1->Active = false;
+	ADOQuery1->SQL->Text = "SELECT * FROM propiski WHERE TYPE = 'Временная'";
+	ADOQuery1->Active = true;
+
+
+	while(!ADOQuery1->Eof)  //Перебираем строки пока они не закончатся из тех которые мы получили выше.
+	{
+
+	   if(StrToInt(ADOQuery1->FieldByName("DATA_VYPISKI_UNIX")->Value) <= DateTimeToUnix(Date())) //если дата выписки меньше или равна текущей дате
+	   {
+		   ShowMessage(ADOQuery1->FieldByName("FAMILIYA")->Value); //здесь пропишем запрос в базу на земену OLD с NO на YES
+	   }
+
+	   ADOQuery1->Next();
+	}
+}
+//---------------------------------------------------------------------------
 

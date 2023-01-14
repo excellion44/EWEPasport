@@ -2,8 +2,8 @@ object Form8: TForm8
   Left = 0
   Top = 0
   Caption = #1044#1072#1085#1085#1099#1077' '#1086' '#1082#1074#1072#1088#1090#1080#1088#1077
-  ClientHeight = 428
-  ClientWidth = 752
+  ClientHeight = 571
+  ClientWidth = 925
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,7 +24,7 @@ object Form8: TForm8
   object DBGrid1: TDBGrid
     Left = 16
     Top = 16
-    Width = 713
+    Width = 901
     Height = 169
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
@@ -36,8 +36,8 @@ object Form8: TForm8
   object DBGrid2: TDBGrid
     Left = 16
     Top = 210
-    Width = 713
-    Height = 199
+    Width = 901
+    Height = 327
     DataSource = DataSource2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -118,6 +118,18 @@ object Form8: TForm8
       end
       item
         Expanded = False
+        FieldName = 'DATA_VYPISKI'
+        Title.Caption = #1044#1072#1090#1072' '#1074#1099#1087#1080#1089#1082#1080
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 118
+        Visible = True
+      end
+      item
+        Expanded = False
         FieldName = 'TYPE'
         Title.Caption = #1058#1080#1087
         Title.Font.Charset = DEFAULT_CHARSET
@@ -125,7 +137,7 @@ object Form8: TForm8
         Title.Font.Height = -11
         Title.Font.Name = 'Tahoma'
         Title.Font.Style = [fsBold]
-        Width = 99
+        Width = 125
         Visible = True
       end>
   end
@@ -158,6 +170,7 @@ object Form8: TForm8
     end
     object N2: TMenuItem
       Caption = #1042#1099#1087#1080#1089#1072#1090#1100
+      OnClick = N2Click
     end
   end
 end
