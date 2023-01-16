@@ -3,7 +3,7 @@
   Top = 0
   Caption = #1050#1072#1088#1090#1086#1095#1082#1072' '#1078#1080#1090#1077#1083#1103
   ClientHeight = 761
-  ClientWidth = 1020
+  ClientWidth = 1154
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -193,7 +193,7 @@
   object DBGrid1: TDBGrid
     Left = 8
     Top = 165
-    Width = 1004
+    Width = 1138
     Height = 332
     Color = clCream
     DataSource = DataSource1
@@ -268,6 +268,14 @@
         Title.Caption = #1052#1077#1089#1090#1086' '#1088#1086#1078#1076#1077#1085#1080#1103
         Width = 242
         Visible = True
+      end
+      item
+        Color = clBtnFace
+        Expanded = False
+        FieldName = 'OSNOVANIE'
+        Title.Caption = #1054#1089#1085#1086#1074#1072#1085#1080#1077
+        Width = 127
+        Visible = True
       end>
   end
   object Edit4: TEdit
@@ -295,7 +303,7 @@
   object DBGrid2: TDBGrid
     Left = 8
     Top = 525
-    Width = 1004
+    Width = 1138
     Height = 149
     Color = clBtnFace
     DataSource = DataSource2
@@ -363,7 +371,7 @@
   object Memo1: TMemo
     Left = 400
     Top = 32
-    Width = 612
+    Width = 746
     Height = 102
     TabOrder = 9
   end

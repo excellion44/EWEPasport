@@ -12,6 +12,7 @@ object Form11: TForm11
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poMainFormCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -27,7 +28,7 @@ object Form11: TForm11
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object Label2: TLabel
+  object ID: TLabel
     Left = 16
     Top = 111
     Width = 11
@@ -41,6 +42,7 @@ object Form11: TForm11
     Height = 25
     Caption = #1054#1050
     TabOrder = 0
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 127
@@ -49,8 +51,9 @@ object Form11: TForm11
     Height = 25
     Caption = #1054#1090#1084#1077#1085#1072
     TabOrder = 1
+    OnClick = Button2Click
   end
-  object DateTimePicker1: TDateTimePicker
+  object DataVypiski: TDateTimePicker
     Left = 16
     Top = 32
     Width = 186

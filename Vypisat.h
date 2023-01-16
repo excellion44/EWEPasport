@@ -16,9 +16,11 @@ class TForm11 : public TForm
 __published:	// IDE-managed Components
 	TButton *Button1;
 	TButton *Button2;
-	TDateTimePicker *DateTimePicker1;
+	TDateTimePicker *DataVypiski;
 	TLabel *Label1;
-	TLabel *Label2;
+	TLabel *ID;
+	void __fastcall Button2Click(TObject *Sender);
+	void __fastcall Button1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm11(TComponent* Owner);

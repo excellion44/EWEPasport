@@ -13,6 +13,7 @@
 #include <Vcl.Grids.hpp>
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.Menus.hpp>
+#include <Vcl.Buttons.hpp>
 //---------------------------------------------------------------------------
 class TForm2 : public TForm
 {
@@ -28,6 +29,10 @@ __published:	// IDE-managed Components
 	TEdit *Edit1;
 	TLabel *Label1;
 	TLabel *Command;
+	TEdit *Edit2;
+	TEdit *Edit3;
+	TEdit *Edit4;
+	TBitBtn *BitBtn1;
 	void __fastcall DBGrid1DblClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations

@@ -35,24 +35,48 @@ object Form2: TForm2
       item
         Expanded = False
         FieldName = 'FAMILIYA'
+        Title.Caption = #1060#1072#1084#1080#1083#1080#1103
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
         Width = 179
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'IMYA'
+        Title.Caption = #1048#1084#1103
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
         Width = 170
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'OTCHESTVO'
+        Title.Caption = #1054#1090#1095#1077#1089#1090#1074#1086
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
         Width = 155
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'GOD_ROZDENIYA'
+        Title.Caption = #1043#1086#1076' '#1088#1086#1078#1076#1077#1085#1080#1103
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
         Width = 174
         Visible = True
       end>
@@ -67,8 +91,8 @@ object Form2: TForm2
     ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
-      Left = 16
-      Top = 16
+      Left = 464
+      Top = 8
       Width = 92
       Height = 13
       Caption = #1041#1099#1089#1090#1088#1099#1081' '#1087#1086#1080#1089#1082':'
@@ -80,8 +104,8 @@ object Form2: TForm2
       ParentFont = False
     end
     object Command: TLabel
-      Left = 848
-      Top = 32
+      Left = 888
+      Top = 8
       Width = 47
       Height = 13
       Caption = 'Command'
@@ -89,9 +113,38 @@ object Form2: TForm2
     object Edit1: TEdit
       Left = 16
       Top = 35
-      Width = 137
+      Width = 169
       Height = 21
       TabOrder = 0
+    end
+    object Edit2: TEdit
+      Left = 191
+      Top = 35
+      Width = 170
+      Height = 21
+      TabOrder = 1
+    end
+    object Edit3: TEdit
+      Left = 370
+      Top = 35
+      Width = 143
+      Height = 21
+      TabOrder = 2
+    end
+    object Edit4: TEdit
+      Left = 528
+      Top = 35
+      Width = 161
+      Height = 21
+      TabOrder = 3
+    end
+    object BitBtn1: TBitBtn
+      Left = 704
+      Top = 33
+      Width = 75
+      Height = 25
+      Caption = #1053#1072#1081#1090#1080
+      TabOrder = 4
     end
   end
   object ADOQuery1: TADOQuery

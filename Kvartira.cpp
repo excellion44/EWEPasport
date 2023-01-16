@@ -55,7 +55,8 @@ void __fastcall TForm8::DBGrid2DrawColumnCell(TObject *Sender, const TRect &Rect
 
 void __fastcall TForm8::N2Click(TObject *Sender)
 {
-     Form11->ShowModal();
+	 Form11->ID->Caption = ADOQuery2->FieldByName("ID")->Value;
+	 Form11->ShowModal();
 }
 //---------------------------------------------------------------------------
 
