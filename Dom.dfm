@@ -40,6 +40,12 @@ object Form6: TForm6
         Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
+        Title.Caption = #1058#1080#1087
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
         Width = 193
         Visible = True
       end
@@ -52,6 +58,12 @@ object Form6: TForm6
         Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
+        Title.Caption = #1053#1086#1084#1077#1088
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
         Visible = True
       end
       item
@@ -63,6 +75,12 @@ object Form6: TForm6
         Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
+        Title.Caption = #1041#1091#1082#1074#1072
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
         Width = 62
         Visible = True
       end>

@@ -32,6 +32,7 @@ object Form7: TForm7
     OnDblClick = DBGrid1DblClick
     Columns = <
       item
+        Color = clBtnFace
         Expanded = False
         FieldName = 'OBJECKTS'
         Title.Caption = #1054#1073#1098#1077#1082#1090
@@ -44,6 +45,7 @@ object Form7: TForm7
         Visible = True
       end
       item
+        Color = clBtnFace
         Expanded = False
         FieldName = 'NOMER_OBJECKTS'
         Title.Caption = #1053#1086#1084#1077#1088
@@ -56,6 +58,7 @@ object Form7: TForm7
         Visible = True
       end
       item
+        Color = clBtnFace
         Expanded = False
         FieldName = 'BUKVA_OBJECKTS'
         Title.Caption = #1041#1091#1082#1074#1072

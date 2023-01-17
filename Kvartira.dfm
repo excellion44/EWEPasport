@@ -57,6 +57,7 @@ object Form8: TForm8
     OnDblClick = DBGrid2DblClick
     Columns = <
       item
+        Color = clBtnFace
         Expanded = False
         FieldName = 'FAMILIYA'
         Title.Caption = #1060#1072#1084#1080#1083#1080#1103
@@ -69,6 +70,7 @@ object Form8: TForm8
         Visible = True
       end
       item
+        Color = clBtnFace
         Expanded = False
         FieldName = 'IMYA'
         Title.Caption = #1048#1084#1103
@@ -81,6 +83,7 @@ object Form8: TForm8
         Visible = True
       end
       item
+        Color = clBtnFace
         Expanded = False
         FieldName = 'OTCHESTVO'
         Title.Caption = #1054#1090#1095#1077#1089#1090#1074#1086
@@ -93,6 +96,7 @@ object Form8: TForm8
         Visible = True
       end
       item
+        Color = clBtnFace
         Expanded = False
         FieldName = 'GOD_ROZDENIYA'
         Title.Caption = #1043#1086#1076' '#1056#1086#1078#1076#1077#1085#1080#1103
@@ -105,6 +109,7 @@ object Form8: TForm8
         Visible = True
       end
       item
+        Color = clBtnFace
         Expanded = False
         FieldName = 'DATA_PROPISKI'
         Title.Caption = #1044#1072#1090#1072' '#1087#1088#1086#1087#1080#1089#1082#1080
@@ -117,6 +122,7 @@ object Form8: TForm8
         Visible = True
       end
       item
+        Color = clBtnFace
         Expanded = False
         FieldName = 'DATA_VYPISKI'
         Title.Caption = #1044#1072#1090#1072' '#1074#1099#1087#1080#1089#1082#1080
@@ -129,6 +135,7 @@ object Form8: TForm8
         Visible = True
       end
       item
+        Color = clBtnFace
         Expanded = False
         FieldName = 'TYPE'
         Title.Caption = #1058#1080#1087

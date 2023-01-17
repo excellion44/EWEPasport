@@ -1,9 +1,9 @@
 object Form10: TForm10
   Left = 0
   Top = 0
-  Caption = 'Form10'
-  ClientHeight = 299
-  ClientWidth = 275
+  Caption = #1050#1074#1072#1088#1090#1080#1088#1072' '#1074' '#1086#1073#1098#1077#1082#1090#1077
+  ClientHeight = 421
+  ClientWidth = 340
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -32,8 +32,8 @@ object Form10: TForm10
   object DBGrid1: TDBGrid
     Left = 8
     Top = 32
-    Width = 193
-    Height = 249
+    Width = 324
+    Height = 381
     DataSource = DataSource1
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     PopupMenu = PopupMenu1
@@ -46,21 +46,25 @@ object Form10: TForm10
     OnDblClick = DBGrid1DblClick
     Columns = <
       item
+        Color = clBtnFace
         Expanded = False
         FieldName = 'KVARTIRA'
+        Title.Caption = #1050#1074#1072#1088#1090#1080#1088#1072
         Width = 63
         Visible = True
       end
       item
+        Color = clBtnFace
         Expanded = False
         FieldName = 'BUKVA'
+        Title.Caption = #1041#1091#1082#1074#1072
         Width = 56
         Visible = True
       end>
   end
   object Panel1: TPanel
-    Left = 24
-    Top = 88
+    Left = 80
+    Top = 152
     Width = 161
     Height = 97
     Color = clMoneyGreen

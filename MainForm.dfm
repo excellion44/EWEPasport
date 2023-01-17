@@ -39,7 +39,12 @@ object Form1: TForm1
         FieldName = 'GOROD_ILI_POSELOK'
         Title.Caption = #1052#1077#1089#1090#1086#1087#1086#1083#1086#1078#1077#1085#1080#1077
         Title.Color = clFuchsia
-        Width = 123
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 260
         Visible = True
       end
       item
@@ -48,7 +53,12 @@ object Form1: TForm1
         FieldName = 'ULICA'
         Title.Caption = #1059#1083#1080#1094#1072
         Title.Color = clFuchsia
-        Width = 407
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 722
         Visible = True
       end>
   end
