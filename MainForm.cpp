@@ -58,7 +58,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 void __fastcall TForm1::N5Click(TObject *Sender)
 {
 	Form2->ADOQuery1->Active = false;
-	Form2->ADOQuery1->SQL->Text = "SELECT * FROM chelovek";
+	Form2->ADOQuery1->SQL->Text = "SELECT * FROM chelovek ORDER BY FAMILIYA";
 	Form2->ADOQuery1->Active = true;
     Form2->Command->Caption="NONE";
 

@@ -32,8 +32,13 @@ __published:	// IDE-managed Components
 	TEdit *Edit2;
 	TEdit *Edit3;
 	TEdit *Edit4;
-	TBitBtn *BitBtn1;
+	TBitBtn *SEARCH;
 	void __fastcall DBGrid1DblClick(TObject *Sender);
+	void __fastcall SEARCHClick(TObject *Sender);
+	void __fastcall Edit1KeyPress(TObject *Sender, System::WideChar &Key);
+	void __fastcall Edit2KeyPress(TObject *Sender, System::WideChar &Key);
+	void __fastcall Edit3KeyPress(TObject *Sender, System::WideChar &Key);
+	void __fastcall Edit4KeyPress(TObject *Sender, System::WideChar &Key);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm2(TComponent* Owner);

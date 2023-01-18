@@ -120,6 +120,7 @@ object Form2: TForm2
       Width = 169
       Height = 21
       TabOrder = 0
+      OnKeyPress = Edit1KeyPress
     end
     object Edit2: TEdit
       Left = 191
@@ -127,6 +128,7 @@ object Form2: TForm2
       Width = 170
       Height = 21
       TabOrder = 1
+      OnKeyPress = Edit2KeyPress
     end
     object Edit3: TEdit
       Left = 370
@@ -134,21 +136,24 @@ object Form2: TForm2
       Width = 143
       Height = 21
       TabOrder = 2
+      OnKeyPress = Edit3KeyPress
     end
     object Edit4: TEdit
-      Left = 528
+      Left = 519
       Top = 35
-      Width = 161
+      Width = 170
       Height = 21
       TabOrder = 3
+      OnKeyPress = Edit4KeyPress
     end
-    object BitBtn1: TBitBtn
+    object SEARCH: TBitBtn
       Left = 704
       Top = 33
       Width = 75
       Height = 25
       Caption = #1053#1072#1081#1090#1080
       TabOrder = 4
+      OnClick = SEARCHClick
     end
   end
   object ADOQuery1: TADOQuery
