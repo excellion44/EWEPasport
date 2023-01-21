@@ -130,6 +130,12 @@ object Form5: TForm5
     Top = 19
     Width = 65
     Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 0
   end
   object Edit2: TEdit
@@ -137,6 +143,12 @@ object Form5: TForm5
     Top = 19
     Width = 90
     Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 1
   end
   object Edit3: TEdit
@@ -144,6 +156,12 @@ object Form5: TForm5
     Top = 67
     Width = 619
     Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 2
   end
   object Edit4: TEdit
@@ -151,6 +169,12 @@ object Form5: TForm5
     Top = 113
     Width = 130
     Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 3
   end
   object KOGDA: TDateTimePicker
@@ -160,6 +184,12 @@ object Form5: TForm5
     Height = 21
     Date = 44750.000000000000000000
     Time = 0.411126736107689800
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 4
   end
   object Edit5: TEdit
@@ -167,6 +197,12 @@ object Form5: TForm5
     Top = 113
     Width = 380
     Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 5
   end
   object Button1: TButton
@@ -175,6 +211,12 @@ object Form5: TForm5
     Width = 75
     Height = 25
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 6
     OnClick = Button1Click
   end
@@ -183,6 +225,12 @@ object Form5: TForm5
     Top = 19
     Width = 183
     Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 7
     Text = #1055#1072#1089#1087#1086#1088#1090
     Items.Strings = (
@@ -194,6 +242,12 @@ object Form5: TForm5
     Top = 19
     Width = 255
     Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 8
     Text = #1055#1077#1088#1074#1080#1095#1085#1086#1077
     Items.Strings = (

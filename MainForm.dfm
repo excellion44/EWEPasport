@@ -166,8 +166,8 @@ object Form1: TForm1
     Top = 392
   end
   object MainMenu1: TMainMenu
-    Left = 760
-    Top = 8
+    Left = 744
+    Top = 128
     object N1: TMenuItem
       Caption = #1060#1072#1081#1083
       object N2: TMenuItem

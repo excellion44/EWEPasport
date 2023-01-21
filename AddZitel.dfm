@@ -77,7 +77,7 @@ object Form4: TForm4
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'Georgia'
-    Font.Style = []
+    Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
     TextHint = #1060#1072#1084#1080#1083#1080#1103
@@ -91,7 +91,7 @@ object Form4: TForm4
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'Georgia'
-    Font.Style = []
+    Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
     TextHint = #1048#1084#1103
@@ -105,7 +105,7 @@ object Form4: TForm4
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'Georgia'
-    Font.Style = []
+    Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
     TextHint = #1054#1090#1095#1077#1089#1090#1074#1086
@@ -114,10 +114,16 @@ object Form4: TForm4
     Left = 8
     Top = 68
     Width = 105
-    Height = 21
+    Height = 23
     Hint = #1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
     Date = 44749.000000000000000000
     Time = 0.634534270830045000
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Georgia'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 3
   end
   object Button1: TButton
@@ -133,7 +139,13 @@ object Form4: TForm4
     Left = 130
     Top = 68
     Width = 145
-    Height = 21
+    Height = 23
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Georgia'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 5
     Text = #1044#1077#1077#1089#1087#1086#1089#1086#1073#1085#1099#1081
     Items.Strings = (
@@ -143,8 +155,14 @@ object Form4: TForm4
   object POL: TComboBox
     Left = 288
     Top = 68
-    Width = 49
-    Height = 21
+    Width = 57
+    Height = 23
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Georgia'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 6
     Text = #1052#1091#1078'.'
     Items.Strings = (
